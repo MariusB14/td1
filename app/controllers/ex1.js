@@ -22,11 +22,15 @@ export default class Ex1Controller extends Controller {
   }
 
   @action save(){
-    console.log('Test save' + this.content);
+    console.log('Test save ' + this.content);
   }
 
   @action clear(){
     this.content = '';
+  }
+
+  @action update(){
+    this.info = 'Note modifiée';
   }
 
 }

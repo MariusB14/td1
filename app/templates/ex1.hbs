@@ -5,9 +5,9 @@
   </div>
   <div class="card-body">
     <p class="font-weight-bold"> Note : </p>
-    <textarea class="form-control mb-3" @maxlength="this.MAX" rows="4" @/>
+    <Textarea @input={{this.update}} @maxlength={{this.MAX}} class="form-control mb-3" rows="4" @value={{this.content}}/>
     <div class="alert alert-info"> Il vous reste {{this.size}} caractères à saisir.</div>
-    <div class="alert alert-{{this.style}}">Note modifiée</div>
+    <div class="alert alert-{{this.style}}">{{this.info}}</div>
   </div>
 
   <button class="btn btn-primary" {{action "save"}}>Enregistrer</button>
