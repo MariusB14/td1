@@ -4,10 +4,14 @@
     Ex1: Note application
   </div>
   <div class="card-body">
-    <textarea class="form-control mb-3" rows="4" @value={{this.content}}/>
+    <p class="font-weight-bold"> Note : </p>
+    <textarea class="form-control mb-3" @maxlength="this.MAX" rows="4" @/>
     <div class="alert alert-info"> Il vous reste {{this.size}} caractères à saisir.</div>
+    <div class="alert alert-{{this.style}}">Note modifiée</div>
   </div>
 
   <button class="btn btn-primary" {{action "save"}}>Enregistrer</button>
+  <br/>
+  <button class="btn btn-primary" {{action "clear"}}>Effacer</button>
 </div>
 {{outlet}}
