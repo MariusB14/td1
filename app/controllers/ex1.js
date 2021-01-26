@@ -5,6 +5,7 @@ import {tracked} from '@glimmer/tracking';
 export default class Ex1Controller extends Controller {
   @tracked content = 'Entrez votre texte';
   @tracked info = '';
+  @tracked style_success = 'info';
   MAX=100;
 
   get size(){
@@ -23,6 +24,8 @@ export default class Ex1Controller extends Controller {
 
   @action save(){
     console.log('Test save ' + this.content);
+    this.info = 'Note enregistrée'
+    this.style = "success"
   }
 
   @action clear(){
