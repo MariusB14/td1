@@ -7,7 +7,9 @@
     <p class="font-weight-bold"> Note : </p>
     <Textarea @input={{this.update}} @maxlength={{this.MAX}} class="form-control mb-3" rows="4" @value={{this.content}}/>
     <div class="alert alert-info"> Il vous reste {{this.size}} caractères à saisir.</div>
+    {{#if this.info}}
     <div class="alert alert-{{this.style}}">{{this.info}}</div>
+    {{/if}}
   </div>
 
   <button class="btn btn-primary" {{action "save"}}>Enregistrer</button>
