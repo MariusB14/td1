@@ -1,0 +1,18 @@
+{{page-title "Ex2"}}
+<form class="col-4 align-middle">
+  <h1 class="text-center">Services</h1>
+<div class="alert alert-info">
+    <span>Choisissez les éléments à inclure</span>
+    <p>{{@model.countActive}} services sélectionné(s)</p>
+</div>
+<ul class="list-group">
+  {{#each @model.services as |srv|}}
+  <li class="list-group-item {{if srv.active 'active' ''}}" {{action "toggleActive" srv}}>{{srv.name}} {{srv.price}}€</li>
+  {{/each}}
+</ul>
+<br/>
+<div class="alert alert-success">
+  <p>Total {{@model.sommeActive}}€</p>
+</div>
+</form>
+{{outlet}}
