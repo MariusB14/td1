@@ -1,0 +1,23 @@
+{{page-title "Step1"}}
+<h1>Sélectionnez vos produits</h1>
+<div class="row">
+  <div class="col-sm-4">
+    <p>Produits disponibles :</p>
+    <MultiSelect @elements={{this.dispoItems}} @selected={{this.dispoItems_}}
+    @onChange={{this.changeDispo}} class="form-control"/>
+  </div>
+
+  <div class="col-sm-2">
+    <button {{action "add" this.dispoItems this.includedItems this.dispoItems_}} class="btn btn-primary"> ▶| </button>
+    <button {{action "add" this.dispoItems this.includedItems this.dispoItems}} class="btn btn-primary"> ▶▶| </button>
+    <button {{action "remove" this.includedItems this.dispoItems this.includedItems_}} class="btn btn-primary"> |◀ </button>
+    <button {{action "remove" this.includedItems this.dispoItems this.includedItems}} class="btn btn-primary"> |◀◀ </button>
+  </div>
+
+  <div class="col-sm-4">
+    <p>Produits sélectionnés :</p>
+    <MultiSelect @elements={{this.includedItems}} @selected={{this.includedItems_}}
+    @onChange={{this.changeIncluded}} class="form-control"/>
+  </div>
+</div>
+{{outlet}}
