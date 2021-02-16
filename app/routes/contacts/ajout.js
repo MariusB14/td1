@@ -6,7 +6,7 @@ export default class ContactsAjoutRoute extends Route {
     return {};
   }
 
-  @action add( contact ){
+  @action save( contact ){
     let c = this.store.createRecord('contact', contact);
     c.save().then(() => {
       this.transitionTo('contacts');

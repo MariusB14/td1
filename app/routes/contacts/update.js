@@ -10,7 +10,7 @@ export default class ContactsUpdateRoute extends Route {
     this.render("contacts.ajout");
   }
 
-  @action update( contact ){
+  @action save( contact ){
     contact.save().then(() => {
       this.transitionTo('contacts');
     });
