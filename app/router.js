@@ -11,5 +11,6 @@ Router.map(function () {
   this.route('testList');
   this.route('contacts', function() {
     this.route('ajout');
+    this.route('update',{ path: '/update/:contact_id' });
   });
 });
