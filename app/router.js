@@ -13,4 +13,12 @@ Router.map(function () {
     this.route('ajout');
     this.route('update',{ path: '/update/:contact_id' });
   });
+  this.route('categories', function() {
+    this.route('contacts', { path: '/contact/:category_id' } {
+      this.route('add');
+      this.route('update');
+    });
+    this.route('add');
+    this.route('update');
+  });
 });
