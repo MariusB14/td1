@@ -1,40 +1,20 @@
 {{page-title "Board"}}
 
-<head>
-  <title>Cours Complet Bootstrap 4</title>
-  <meta charset='utf-8'>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-</head>
-<body>
-  <div class="container">
-    <h1>Les tableaux Bootstrap</h1>
-    <table class="table">
-      <thead class="thead-light">
-        <tr>
-          <th>Nom</th>
-          <th>Prénom</th>
-          <th>Age</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Giraud</td>
-          <td>Pierre</td>
-          <td>28</td>
-        </tr>
-        <tr>
-          <td>Durand</td>
-          <td>Victor</td>
-          <td>26</td>
-        </tr>
-        <tr>
-          <td>Joly</td>
-          <td>Julia</td>
-          <td>27</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  </body>
+<div class="ui green segment">
+  <span class="ui label">{{@model.employee.email}}</span>
+  <button class="ui black button" {{action "logout"}}>
+    Déconnexion
+  </button>
+</div>
+<h2>Orders</h2>
+<ul>
+  {{#each @model.orders as |order|}}
+    <li>
+      <LinkTo @route="order" @model={{order.id}}>
+        {{order.dateCreation}} <span class="ui circular label">{{order.count}}</span>
+      </LinkTo>
+    </li>
+  {{/each}}
+</ul>
 
 {{outlet}}

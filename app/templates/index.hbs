@@ -1,29 +1,32 @@
 {{page-title "Index"}}
 
 <body>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-        <div class="card card-signin my-5">
-          <div class="card-body">
-            <h5 class="card-title text-center">Connexion</h5>
-            <form class="form-signin">
-              <div class="form-label-group">
-                <Input @value={{this.user.email}} type="email" id="inputEmail" class="form-control" placeholder="Adresse email" required autofocus/>
-                <br/>
-              </div>
-              <div class="form-label-group">
-                <Input @value={{this.user.password}} type="password" id="inputPassword" class="form-control" placeholder="Mot de passe" required/>
-                <br/>
-              </div>
-              <button class="btn btn-lg btn-primary btn-block" {{action "login" this.user}} type="submit">Se connecter</button>
-              <hr class="my-4">
-            </form>
+<div class="ui middle aligned center aligned grid">
+  <div class="column">
+    <h2 class="ui teal image header">
+      <div class="content">
+        Connectez vous
+      </div>
+    </h2>
+    <form class="ui large form" {{action "login" @model on="submit"}}>
+      <div class="ui stacked segment">
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="user icon"></i>
+            <Input type="email" @value={{@model.email}} name="email" placeholder="Adresse email"/>
           </div>
         </div>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="lock icon"></i>
+            <Input type="password" @value={{@model.password}} name="password" placeholder="Mot de passe"/>
+          </div>
+        </div>
+        <button class="ui fluid large teal submit button" type="submit">Se connecter</button>
       </div>
-    </div>
+    </form>
   </div>
+</div>
 </body>
 
 {{outlet}}

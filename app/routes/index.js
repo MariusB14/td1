@@ -5,6 +5,10 @@ import { action } from '@ember/object';
 export default class IndexRoute extends Route {
   @service userAuth;
 
+  model(){
+    return {};
+  }
+
   @action login(user) {
      this.store
        .query('employee', {
@@ -12,9 +16,9 @@ export default class IndexRoute extends Route {
            email: user.email
          },
        })
-       .then((connected) => {
-         if (connected.length) {
-           connected = connected.firstObject;
+       .then((employees) => {
+         if (employees.length) {
+           let connected = employees.firstObject;
            if (connected.password && connected.password === user.password) {
              this.userAuth.login(connected);
              this.transitionTo('board');
@@ -22,4 +26,4 @@ export default class IndexRoute extends Route {
          }
        });
      }
-   }
+}
