@@ -3,6 +3,7 @@ import { action } from '@ember/object';
 
 export default class SectionsAddRoute extends Route {
   model(){
+    return {};
   }
 
   @action save(data){

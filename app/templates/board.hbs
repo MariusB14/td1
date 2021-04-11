@@ -2,7 +2,7 @@
 
 <div class="ui green segment">
   <span class="ui label">{{@model.employee.email}}</span>
-  <button class="ui black button" {{action "logout"}}>
+  <button class="ui black button" {{action "logout" @model}}>
     Déconnexion
   </button>
   <LinkTo class="ui positive button" @route="sections"> Gérer le store </LinkTo>
