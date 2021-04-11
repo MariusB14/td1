@@ -1,9 +1,19 @@
-# tds
+## Le projet
 
 Ce projet est une application permettant de gérer son magasin en ligne, gérer la préparation de commandes et leur retrait par les clients.
 Cette application a été réalisé avec le framework ember js accompagné de semantic ui pour le front. 
-Ember js est un framework Javascript basé sur l'architecture MVC.
-L'application est composée de plusieurs éléments d'ember js comme les routes (écrites en javascript), les modèles (javascript aussi), et les templates (faits en HTML). 
+Elle fonctionne avec l'API vendor afin d'interagir avec une base de données. L'application est composée de plusieurs éléments d'ember js comme les routes (écrites en javascript), les modèles (javascript aussi), et les templates (faits en HTML). 
+
+# Ember JS et Semantic UI
+* Ember js est un framework Javascript open-source basé sur l'architecture MVC.
+* Semantic UI est un framework front-end qui permet de créer des pages Web esthétiques et responsive. Il a un design élégant et subtil qui offre une expérience utilisateur agréable.
+
+# Le fonctionnement
+
+Pour utiliser l'application, il faut d'abord s'y connecter. On accède ensuite au tableau de bord de l'utilisateur, qui répertorie ses commandes en attente.
+On peut ensuite se déconnecter ou aller sur la gestion du store afin de visualiser les différentes sections du magasin. La page de gestion du store page permet aussi de créer, modfifier ou supprimer une section. 
+
+Si l'on souhaite modifier une section, on arrive alors sur une nouvelle page pour pouvoir voir les produits qui se trouvent dans la section sélectionnée et éventuellement pour ajouter ou supprimer des produits pour cette section.
 
 
 ## Prerequisites
