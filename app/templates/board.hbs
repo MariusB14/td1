@@ -5,8 +5,9 @@
   <button class="ui black button" {{action "logout"}}>
     Déconnexion
   </button>
+  <LinkTo class="ui positive button" @route="sections"> Gérer le store </LinkTo>
 </div>
-<h2>Orders</h2>
+<h2>Commandes</h2>
 <ul>
   {{#each @model.orders as |order|}}
     <li>
