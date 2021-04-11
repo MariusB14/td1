@@ -1,2 +1,16 @@
 {{page-title "AddProduct"}}
+<div id="form"></div>
+<div class="field">
+  <div class="ui input">
+    <Input @value={{model.product.name}}/>
+  </div>
+</div>
+<div class="field">
+  <div class="ui input">
+    <Input @value={{model.product.price}}/>
+  </div>
+</div>
+<div class="field">
+  <button class="ui positive button" {{ action "save" }}>Ajouter le produit</button>
+</div>
 {{outlet}}
