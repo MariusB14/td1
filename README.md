@@ -1,7 +1,9 @@
 # tds
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Ce projet est une application permettant de gérer son magasin en ligne, gérer la préparation de commandes et leur retrait par les clients.
+Cette application a été réalisé avec le framework ember js accompagné de semantic ui pour le front. 
+Elle est composée de plusieurs éléments d'ember js comme les routes (écrites en javascript), les modèles (javascript aussi), et les templates (faits en HTML). 
+
 
 ## Prerequisites
 
