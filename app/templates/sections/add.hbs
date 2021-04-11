@@ -2,16 +2,16 @@
 <div id="form"></div>
 <div class="field">
   <div class="ui input">
-    <Input @value={{model.section.name}}/>
+    <Input @value={{@model.section.name}} placeholder="Entrez le nom"/>
   </div>
 </div>
 <div class="field">
   <div class="ui input">
-    <Input @value={{model.section.description}}/>
+    <Input @value={{@model.section.description}} placeholder="Entrez la description"/>
   </div>
 </div>
 <div class="field">
-  <button class="ui positive button" {{ action "save" }}>Ajouter la section</button>
+  <button class="ui positive button" {{ action "save" @model }}>Ajouter la section</button>
 </div>
 
 {{outlet}}

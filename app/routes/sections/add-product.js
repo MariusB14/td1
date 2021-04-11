@@ -2,6 +2,9 @@ import Route from '@ember/routing/route';
 import { action } from '@ember/object';
 
 export default class SectionsAddProductRoute extends Route {
+  model(){
+    
+  }
 
   @action save(data){
     let product = this.store.createRecord('product', data);
@@ -9,5 +12,5 @@ export default class SectionsAddProductRoute extends Route {
       this.transitionTo('sections');
     });
   }
-  
+
 }

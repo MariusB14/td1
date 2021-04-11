@@ -2,15 +2,15 @@
 <div id="form"></div>
 <div class="field">
   <div class="ui input">
-    <Input @value={{model.product.name}}/>
+    <Input @value={{@model.product.name}} placeholder="Entrez le nom"/>
   </div>
 </div>
 <div class="field">
   <div class="ui input">
-    <Input @value={{model.product.price}}/>
+    <Input @value={{@model.product.price}} placeholder="Entrez le prix"/>
   </div>
 </div>
 <div class="field">
-  <button class="ui positive button" {{ action "save" }}>Ajouter le produit</button>
+  <button class="ui positive button" {{ action "save" @model }}>Ajouter le produit</button>
 </div>
 {{outlet}}
