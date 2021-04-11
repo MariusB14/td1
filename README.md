@@ -1,4 +1,4 @@
-## Le projet
+# Le projet
 
 Ce projet est une application permettant de gérer son magasin en ligne, gérer la préparation de commandes et leur retrait par les clients.
 Cette application a été réalisé avec le framework ember js accompagné de semantic ui pour le front. 
