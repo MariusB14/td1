@@ -1,6 +1,6 @@
 import Route from '@ember/routing/route';
 
-export default class SectionsEditRoute extends Route {
+export default class SectionsEditDeleteRoute extends Route {
   modele(){
     return {};
   }

@@ -1,17 +1,18 @@
 {{page-title "Sections"}}
 
-<div class="ui green segment">
-<LinkTo class="ui positive button" @route="sections/add">Nouvelle section</LinkTo>
-<LinkTo class="ui positive button" @route="sections/add-product">Nouveau produit</LinkTo>
-</div>
 <h2>Store</h2>
+<div class="ui green segment">
+<LinkTo class="ui positive button" @route="sections.add">Nouvelle section</LinkTo>
+<LinkTo class="ui positive button" @route="sections.addProduct">Nouveau produit</LinkTo>
+<LinkTo class="ui black button" @route="board">Retour au tableau de bord</LinkTo>
+</div>
 <ul>
   {{#each @model as |section|}}
     <li>{{section.name}}
-      <LinkTo class="ui mini icon button" @route="sections/edit" @model={{section.id}}>
+      <LinkTo class="ui mini icon button" @route="sections.edit" @model={{section.id}}>
         <i class="ui edit icon"></i>
       </LinkTo>
-      <LinkTo class="ui mini icon button" @route="sections/delete" @model={{section.id}}>
+      <LinkTo class="ui mini icon button" @route="sections.delete" @model={{section.id}}>
         <i class="ui delete icon"></i>
       </LinkTo>
     </li>
