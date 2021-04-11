@@ -5,5 +5,4 @@ export default class SectionsEditRoute extends Route {
     return {};
   }
 
-  
 }
