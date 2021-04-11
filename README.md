@@ -4,7 +4,7 @@ Ce projet est une application permettant de gérer son magasin en ligne, gérer 
 Cette application a été réalisé avec le framework ember js accompagné de semantic ui pour le front. 
 Elle fonctionne avec l'API vendor afin d'interagir avec une base de données. L'application est composée de plusieurs éléments d'ember js comme les routes (écrites en javascript), les modèles (javascript aussi), et les templates (faits en HTML). 
 
-# Ember JS et Semantic UI
+## Ember JS et Semantic UI
 * Ember js est un framework Javascript open-source basé sur l'architecture MVC (modèle-vue-contrôleur).
 * Semantic UI est un framework front-end qui permet de créer des pages Web esthétiques et responsive. Il a un design élégant et subtil qui offre une expérience utilisateur agréable.
 
