@@ -1,0 +1,17 @@
+{{page-title "Add"}}
+<div id="form"></div>
+<div class="field">
+  <div class="ui input">
+    <Input @value={{model.section.name}}/>
+  </div>
+</div>
+<div class="field">
+  <div class="ui input">
+    <Input @value={{model.section.description}}/>
+  </div>
+</div>
+<div class="field">
+  <button class="ui positive button" {{ action "save" }}>Ajouter</button>
+</div>
+
+{{outlet}}

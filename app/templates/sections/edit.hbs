@@ -1,0 +1,21 @@
+{{page-title "Edit"}}
+<LinkTo class="ui positive button" @route="sections/edit/addProduct">Ajouter un produit</LinkTo>
+<ul>
+  {{#each @model as |product|}}
+    <li>{{product.name}}
+      <LinkTo class="ui mini icon button" @route="sections/edit/edit" @model={{product.id}}>
+        <i class="ui edit icon"></i>
+      </LinkTo>
+      <LinkTo class="ui mini icon button" @route="sections/edit/delete" @model={{product.id}}>
+        <i class="ui delete icon"></i>
+      </LinkTo>
+    <ul>
+      {{#each product.packs as |pack|}}
+        <li>{{pack.name}}</li>
+      {{/each}}
+    </ul>
+    </li>
+  {{/each}}
+
+</ul>
+{{outlet}}
